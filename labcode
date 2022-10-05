@@ -1,0 +1,37 @@
+def fsum(start,stop):
+    sum = 0
+    while start < stop+1:
+        sum = sum + (start)
+        start = start +1
+    return sum
+def countdown(start,interval):
+    print("Countdown: ")
+    print(start)
+    num = int(start)
+    counter = 1
+    while num > 0:
+        num = start-(interval*counter)
+        if num > 0:
+            print(num)
+
+            counter += 1
+def function_chooser():
+    print("Welcome to the function chooser. Please choose a function.")
+    print("1 = Cumlative Sum")
+    print("2 = Countdown")
+    print("Your choice: ")
+    choice = int(input())
+    if choice ==1:
+        print("Please enter a starting number: ")
+        start = int(input())
+        print("Please enter a stopping number to sum up to: ")
+        stop = int(input())
+        a = fsum(start,stop)
+        print(a)
+    elif choice ==2:
+        print("Please enter a starting number: ")
+        start1 = int(input())
+        print("Please enter a number to countdown by: ")
+        stop1 = int(input())
+        countdown(start1,stop1)
+function_chooser()
